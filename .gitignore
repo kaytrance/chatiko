@@ -1,0 +1,8 @@
+node_modules
+bower_components
+.c9
+.bower-cache
+.bower-registry
+.bower-tmp
+config.js
+gulpfile.js

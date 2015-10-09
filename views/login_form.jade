@@ -1,0 +1,19 @@
+form.s12.col#login-form
+	div.card-panel
+		- if( message ) {
+		h5.red-text #{message}
+		- } else {
+		// h5 Join room
+		- }
+		div.row
+			div.input-field.s12.m4.col
+				input#room-name(type="text", ng-model="params.room_id")
+				label(for="room-name") Room name
+			div.input-field.s12.m4.col
+				input#room-password(type="password", ng-model="params.room_password")
+				label(for="room-password") Room password
+			div.input-field.s12.m4.col
+				input#client-name(type="text", ng-model="params.client_name")
+				label(for="client-name") Your name
+			div.center-align
+				a.btn(href="", ng-click="joinRoom()") Create/Join 

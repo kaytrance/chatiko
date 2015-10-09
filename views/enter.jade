@@ -1,0 +1,49 @@
+doctype html
+html(ng-app="myApp")
+	head
+		title joined room "#{room_id}"
+		meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+		meta(http-equiv="X-UA-Compatible",content="IE=edge,chrome=1")
+		meta(name="viewport",content="width=device-width, initial-scale=1.0")
+		META(NAME="title", CONTENT=title)
+		META(NAME="description", CONTENT="")
+		META(NAME="keywords",CONTENT="")
+		META(NAME="robot", CONTENT="index,nofollow")
+		META(NAME="author", CONTENT="")
+		meta(http-equiv="Cache-control", content="max-age=86400")
+		META(NAME="revisit-after", CONTENT="2")
+		link(href="https://fonts.googleapis.com/icon?family=Material+Icons",rel="stylesheet")
+		link(type="text/css",rel="stylesheet",href="/css/index.css")
+        
+	body#chat(ng-controller="roomCtrl")
+		div
+			div.container
+				div.hide
+					div#user #{user}
+					div#token #{token}
+				
+				div.row#cha
+					div.s12.col
+						
+						ul.messages
+							li(ng-repeat="m in messages", ng-style="getStyle(m.color)", ng-class="{ 'message' : m.isMessage, 'notification' : !m.isMessage }")
+								span.time {{m.time}} {{m.tick}} 
+								span.user {{m.user}}: 
+								span.message {{m.message}}
+							
+		div#footer
+			div#controls
+				div.container
+					div.row
+						div.s12.col
+							textarea.z-depth-1(ng-disabled="!canChat",ng-model="mymessage", ng-keypress="sendMessage($event)",placeholder="Start typing here")
+			
+		script(type="text/javascript",src="/js/jquery.min.js")
+		script(type="text/javascript",src="/js/angular.min.js")
+		script(type="text/javascript",src="/js/materialize.min.js")
+		script(type="text/javascript",src="/socket.io/socket.io.js")
+		script(type="text/javascript",src="/js/appRoom.js")
+		script.
+			$(function() {
+				$( window ).resize();
+			});

@@ -1,0 +1,1 @@
+var app=angular.module("myApp",[]);app.controller("indexCtrl",["$scope","$http",function(o,a){o.params={room_id:null,room_password:null,client_name:null},o.joinRoom=function(){a.post("/join",o.params).success(function(a){0===a.status?window.location.href="/enter/"+o.params.room_id.toLowerCase()+"/"+a.message:Materialize.toast("Incorrect information, try again",4e3)})}}]);

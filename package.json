@@ -1,0 +1,47 @@
+{
+  "name": "Chatico",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "amqp": "^0.2.4",
+    "async": "^1.3.0",
+    "body-parser": "^1.13.1",
+    "compression": "^1.5.1",
+    "connect-mongo": "^0.8.1",
+    "consolidate": "^0.13.1",
+    "cookie-parser": "^1.3.5",
+    "express": "^4.13.0",
+    "express-session": "^1.11.3",
+    "jade": "^1.11.0",
+    "log4js": "^0.6.26",
+    "method-override": "^2.3.3",
+    "moment": "^2.10.3",
+    "mongodb": "^2.0.39",
+    "mongoose": "^4.0.5",
+    "promise": "^7.0.3",
+    "serve-favicon": "^2.3.0",
+    "socket.io": "^1.3.6"
+  },
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-if": "^1.2.5",
+    "gulp-jshint": "^1.11.1",
+    "gulp-ng-annotate": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^5.1.0",
+    "gulp-rev-collector": "^1.0.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.2.0",
+    "mocha": "^2.2.5",
+    "should": "^7.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kaytrance",
+  "license": "ISC",
+  "engines" : { "node" : ">=0.12.0" } 
+}

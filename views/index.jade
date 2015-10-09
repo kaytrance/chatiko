@@ -1,0 +1,35 @@
+doctype html
+html(ng-app="myApp")
+	head
+		title=title
+		meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+		meta(http-equiv="X-UA-Compatible",content="IE=edge,chrome=1")
+		meta(name="viewport",content="width=device-width, initial-scale=1.0")
+		META(NAME="title", CONTENT=title)
+		META(NAME="description", CONTENT="Chatiko is free web-based private chat.")
+		META(NAME="keywords",CONTENT="kaytrance,chatico,private chat,web chat,free chat,chat")
+		META(NAME="robot", CONTENT="index,nofollow")
+		META(NAME="author", CONTENT="")
+		meta(http-equiv="Cache-control", content="max-age=86400")
+		META(NAME="revisit-after", CONTENT="2")
+		
+		link(type="text/css",rel="stylesheet",href="/css/index.css")
+
+	body.bgr(ng-controller="indexCtrl")
+		main
+			div.row
+				div.s12.col.nopadding
+					include ./sliders.jade
+			div.row
+				div.s12.m10.l6.offset-m1.offset-l3.col
+					include ./login_form.jade
+		
+		footer.main
+			include ./footer.jade
+			
+		script(type="text/javascript",src="/js/jquery.min.js")
+		script(type="text/javascript",src="/js/angular.min.js")
+		script(type="text/javascript",src="/js/materialize.min.js")
+		script(type="text/javascript",src="/js/appIndex.js")
+		script.
+			$(document).ready(function(){ $('.slider').slider(); });
